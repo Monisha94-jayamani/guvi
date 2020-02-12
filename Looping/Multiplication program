@@ -1,4 +1,4 @@
-// Multiplication problem 
+# Multiplication program 
 num = int(input("Enter the number: "))
 
 print("Multiplication Table of", num)
