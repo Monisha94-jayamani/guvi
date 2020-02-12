@@ -1,0 +1,15 @@
+#program to see your grade based on mark
+
+#getting input and cast to integer
+num=int(input("enter your mark to see your grade:"))
+#checking condition based on mark to see your grade
+if(num>=95):
+    print("grade A")
+elif(num>=70 and num<=89):
+    print("grade B")
+elif(num>=60 and num<=69):
+    print("grade C")
+elif(num>=30 and num<=49):
+    print("grade D")
+else:
+    print(fail)
