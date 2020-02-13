@@ -1,0 +1,19 @@
+#to print prime and non prime in a list
+start=int(input("enter the number of elements"))
+end=int(input("enter the number of elements"))
+prime=[]
+nonprime=[]
+for val in range(start,end): 
+      
+   # If num is divisible by any number   
+   # between 2 and val, it is not prime  
+   if val > 1: 
+       for n in range(2, val): 
+           if (val % n) == 0: 
+               nonprime.append(val)
+               break
+       else: 
+           prime.append(val)
+           print(val)
+print("prime number are",prime)
+print(" non prime number are",nonprime)
