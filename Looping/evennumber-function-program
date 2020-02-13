@@ -1,0 +1,10 @@
+#function-print the even number from 1 to 100 
+#getting input
+
+def even():
+    i=2
+    while i <=100: 
+        print(i)
+        i += 2
+    return i    
+even()
