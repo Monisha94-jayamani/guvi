@@ -1,0 +1,28 @@
+#to print odd and even separately and to print sum of odd number and even number
+start = int(input("Enter a start number: "))
+# manually assign start to 0 if is it wanted default ....start=0
+end=int(input("Enter a end number: "))
+# manually assign start to 100 .....start=100
+even=[]
+odd=[]
+sume=0
+sumo=0
+# to execute a loop from start and end
+for i in range(start,end):
+    #if a number didvide by 2 is even
+    if (i % 2) == 0:
+        even.append(i)
+    else:
+        odd.append(i)
+#to print even number
+#to print odd number
+print("the even number",even)
+print("the odd number",odd)
+#iterate the even in j to add all the numbers in elements as same as k in odd
+for j in even:
+    sume=sume+j
+for k in odd:
+    sumo=sumo+k
+# to print the add number
+print("the sum of even number",sume)
+print("the sum of odd number",sumo)
