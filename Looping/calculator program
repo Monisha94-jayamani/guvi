@@ -9,27 +9,27 @@ print("4.Divide")
 print("5.modulus")
 print("6.power")
 # Take input from the user 
-choice = input("Enter choice : ")
+c =float(input("Enter choice : "))
+choice=round(c)
 
 
-
-if (choice == '1'):
+if (choice == 1):
    print("value of",num1,"and",num2,"=", (num1+num2))
 
-elif (choice == '2'):
+elif (choice == 2):
   print("value of",num1,"and",num2,"=", (num1-num2))
 
-elif (choice == '3'):
+elif (choice == 3):
    print("value of",num1,"and",num2,"=", (num1*num2))
 
-elif (choice == '4'):
+elif (choice == 4):
     if num2==0: 
         print("value of",num1,"and",num2,"=","infinity")
     else:
         print("value of",num1,"and",num2,"=",(num1/num2))
-elif (choice == '5'):
+elif (choice == 5):
    print(num1,"%",num2,"=",(num1%num2))
-elif (choice == '6'):
+elif (choice == 6):
    print("the value of",num1,"and",num2,"=",(num1**num2)) 
 else:
    print("Invalid input")
