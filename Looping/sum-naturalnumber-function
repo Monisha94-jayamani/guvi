@@ -1,0 +1,11 @@
+# function-print sum of all natural number from 1to 100
+def even():
+    sum=0
+    i=1
+# while loop to iterate and add with it
+    while i <=100: 
+        sum=sum+i
+        i=i+1
+    print(sum)
+    return sum    
+even()
