@@ -1,36 +1,35 @@
 #calculator
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 print("Select operation.")
 print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
-print("5")
-print("6")
-
-# Take input choice from the user 
+print("5.modulus")
+print("6.power")
+# Take input from the user 
 choice = input("Enter choice : ")
-#getting the number input from user
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-#based on choice various operation will perform
+
+
+
 if (choice == '1'):
-   print("the value of",num1,"and",num2,"=", (num1+num2))
+   print("value of",num1,"and",num2,"=", (num1+num2))
 
 elif (choice == '2'):
-   print("the value of",num1,"and",num2,"=",(num1-num2) )
+  print("value of",num1,"and",num2,"=", (num1-num2))
 
 elif (choice == '3'):
-   print("the value of",num1,"and",num2,"=", (num1*num2))
+   print("value of",num1,"and",num2,"=", (num1*num2))
 
 elif (choice == '4'):
-      if num2==0: 
-        print("the value of",num1,"and",num2,"=","infinity")
-      else:
-          print("the value of",num1,"and",num2,"=",(num1/num2))
-   
+    if num2==0: 
+        print("value of",num1,"and",num2,"=","infinity")
+    else:
+        print("value of",num1,"and",num2,"=",(num1/num2))
 elif (choice == '5'):
-   print("the value of",num1,"and",num2,"=",(num1%num2))
+   print(num1,"%",num2,"=",(num1%num2))
 elif (choice == '6'):
-    print("the value of",num1,"and",num2,"=",(num1**num2)) 
+   print("the value of",num1,"and",num2,"=",(num1**num2)) 
 else:
    print("Invalid input")
