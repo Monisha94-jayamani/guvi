@@ -1,0 +1,10 @@
+#heart pattern program
+for row in range(6):
+#To iterate over 6 rows available
+    for col in range(7):#Here we have 7 columns
+        if row==0 and col%3!=0 or row==1 and col%3==0 or row-col==2 or row+col==8: 
+        #condition to execute
+            print('*',end=" ")
+        else:
+            print(" ",end=" ")
+    print()
