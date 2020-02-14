@@ -1,0 +1,59 @@
+#program to ola
+def ola():  
+    #src=float(input("Enter the source km: "))
+    des=float(input("Enter the destination km: "))
+    print("Available sources are")
+    print("1.Auto- Rs.10/-")
+    print("2.Micro- Rs.30/-")
+    print("3.Mini- Rs.50/-")
+    print("4.Prime- Rs.100/-")
+    a=int(input("Please choose the option: "))
+    dist=des
+    
+    def auto():
+        amount=dist*10
+        return amount
+    
+    def micro():
+        amount=dist*30
+        return amount
+        
+    def mini():
+        amount=dist*50
+        return amount
+        
+    def prime():
+        amount=dist*100
+        return amount
+       
+   
+
+    if(a==1):
+        auto1 =auto()
+        print("Total km you are travelled is {0} and amount you pay {1}".format(dist,auto1))
+    elif(a==2):
+        micro1=micro()
+        print("Total km you are travelled is {0} and amount you pay {1}".format(dist,micro1))
+    elif(a==3):
+        mini1=mini()
+        print("Total km you are travelled is {0} and amount you pay {1}".format(dist,mini1))
+    elif(a==4):
+        prim1=prime()
+        print("Total km you are travelled is {0} and amount you pay {1}".format(dist,prim1))
+    else:
+        printf("Sorry your option is invalid")
+ola()
+print("if you want to continue service")
+print("1. yes")
+print("2.no")
+ch=input("enter 1 or 2")
+n=1
+while(n==1):
+    if(ch=="1"):
+        ola()
+        break
+    else:
+        print("ok thank u")
+
+ 
+    
