@@ -1,0 +1,13 @@
+# Python Program to Print Natural Numbers in Reverse Order
+ 
+number = int(input("Please Enter any Number: "))
+
+
+print("List of Natural Numbers from {0} to 1 in Reverse Order : ".format(number)) 
+def reverse():
+    i = number
+    while ( i >= 1):
+        print (i, end = '  ')
+        i = i - 1
+    return i
+reverse()
