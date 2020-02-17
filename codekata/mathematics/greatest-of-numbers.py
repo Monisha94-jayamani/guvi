@@ -1,6 +1,6 @@
 n = int(input("") )
 digits = [int(x) for x in str(n)]
-print (digits)
+#print (digits)
 length=len(digits)
 #print (length)
 m=0
