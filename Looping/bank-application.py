@@ -15,7 +15,7 @@ while(i<5):
         if(hashdefinedpassword==hashedruntimepassword):
             print("ok")
             N=1000
-            i=0
+            c=0
             while(i<=N):
                 tocheckbalance=input("you need to check balance: yes or no:")
                 if(tocheckbalance=="yes"):
@@ -44,11 +44,11 @@ while(i<5):
                 service=input("to do want continue yes or no:")
                 if(service=="no"):
                     exit()
-                i=i+1
-    else:
-        i=i+1
-        
-exit()    
+                c=c+1
+    i=i+1            
+else:
+    
+    exit()    
     
 
 
