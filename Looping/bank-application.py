@@ -26,7 +26,7 @@ while(i<5):
         
             N=1000
             c=0
-            while(i<=N):
+            while(c<=N):
                 print("1.balance")
                 print("2.deposit")
                 print("3.cash withdrawal")
