@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <style>
+        .flex-container {
+          display: flex;
+          flex-wrap: nowrap;
+          background-color: DodgerBlue;
+        }
+        
+        .flex-container > div {
+          background-color: #f1f1f1;
+          width: 423px;
+          margin: 10px;
+          text-align: center;
+          line-height: 75px;
+          font-size: 30px;
+        }
+        #demo{
+          color:red;
+        }
+        </style>
+    <body>
+        <script src="operation.js"></script>
+        <div class="flex-container">
+            <div>
+                <h1>Team 1</h1>
+                <button type="button" onclick="play1()">Play</button>
+              
+                <section>
+                    <p id="p1">player</p>
+                    <p id="r1">run</p>
+                    <p id="b1">Ball</p>
+                    <p id="score1">score</p>
+                    <p id="w1">wicket</p>
+                </section>
+            </div>
+            
+            <div>
+                <h1>Team 2</h1>
+                <button type="button" onclick="play2()" >Play</button>
+               
+                <section>
+                    <p id="p2">player<p>
+                    <p id="r2">run</p>
+                    <p id="b2">Ball</p>
+                    <p id="score2">score</p>
+                    <p id="w2">wicket</p>
+                </section>
+            </div>
+        </div>
+    <br><br>
+    
+    <div><h1 align="center"><a href="resultcricket.html"> SUBMIT </a></h1></div>
+   
+    
+</body>
+</html>
