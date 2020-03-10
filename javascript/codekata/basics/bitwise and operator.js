@@ -1,7 +1,4 @@
 
-deebika kishore
-12:05 PM (0 minutes ago)
-to me
 
 const readline=require('readline');
 const inp=readline.createInterface({
