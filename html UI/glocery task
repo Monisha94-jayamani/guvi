@@ -1,0 +1,162 @@
+//glocery html
+!DOCTYPE HTML>
+<html>
+<title>www.grocery.com</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+   background-color:grey;
+}
+
+#a1
+{  
+    background-color:steelblue;
+}
+#inpfield
+ 
+ {
+    background-color:steelblue;
+}
+#a2
+{ 
+  background-color:lavender;
+}
+#b1
+{
+ border-color:ghostwhite;
+}
+#b2
+{
+ border-color:steelblue;
+}
+.click{
+ text_align:center;
+display:block;
+ width:500px;
+ margin-left:8%;
+padding:2px;
+ }
+.design{
+  border-radius:5px solid black;
+  position:relative;
+  top:100px;
+  left:30%;
+  width:600px;
+  padding:2px;
+  border:1px solid black;
+  margin:0;
+}
+
+.text-line
+{
+color:solid black;
+outline:none;
+outline-style:none;
+border-top:none;
+border-left:none;
+border-right:none;
+margin-left:9%;
+padding:3px 165px;
+background color: #0000FF;
+border-color:pink;
+}
+</style>
+</head>
+<body>
+
+<div class="design" id="a1">
+<h2><center><font color="lavender">Add Grocery Items</center></font></h2><br>
+<input type="text" id="inpfield" class="text-line"/><br><br>
+<button class="click" id="b1" onclick="myfunc()">Submit Here</button>
+<br>
+</div>
+<br><br><br>
+<div class="design" id="a2">
+<h2><center><font color="steelblue">Grocery Items</center></font></h2><br>
+<p id="res" class="text-line"></p>
+<button class="click" id="b2" >Clear items</button>
+<br>
+</div>
+<script>
+function myfunc(){
+  var x=document.getElementById("inpfield").value;
+  document.getElementById("res").innerHTML=x;
+}
+</script>
+</body>
+</html>
+//sign in 
+page
+<head>
+<title>login page</title>
+     <link rel="stylesheet" href="sl.css">
+</head>
+<body>
+  <div class="login-page">
+  <div class="form">
+       
+       <form class="login_form">
+       <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/love-letter_1f48c.png" width="90" height="80">
+       <p><h3>Login!</h3> </p>
+       <input type="text" placeholder="User Id"/>
+       <input type="text" placeholder="Password"/>
+       <input type="button" class="button" value="Login" onclick="myFunction()">
+<script>
+function myFunction(){
+alert ("Login Successfully!!!");
+}
+</script>
+</div>
+</div>
+</body>
+</html>
+
+#css
+
+body{
+    background-image: linear
+    gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(pic1.jpg);
+    height:100vh;
+    background-position:center;
+}
+
+
+.login-page{
+     width:360px;
+     padding:10% 0 0;
+     margin:auto;
+}
+.form{
+     position:relative;
+     z-index: 1;
+     background:white;
+     max-width:360px;
+     margin:0 auto 100px;
+     padding:45px;
+     text-align:center
+}
+.form input{
+    font-family:"Roboto",sans-serif;
+    outline:1;
+    background:#f2f2f2;
+    width:100%;
+    border:0;
+    margin:0 0 15px;
+    padding:15px;
+    box-sizing:border-box;
+    font-size:14px;
+}
+.form button{
+   font-family:"roboto",sans-serif;
+   text-transform:lower case;
+   outline:0;
+   background:blue;
+   width:100%;
+   border:0;
+   padding:15px;
+   color:white;
+   font-size:14px;
+   cursor:pointer;
+}
