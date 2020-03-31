@@ -22,14 +22,16 @@ for(var i=0;i<b.length;i++)
 console.log(c);
 var count=[]
 var v=0;
+var d;
+console.log(v);
+console.log(c.length);
 for(var j=0;j<c.length;j++)
-{
-    var d=c[j].split(" ");
-    for(var k=0;k<d.length;k++)
-    {
-        v+=1
-    }
+{    console.log(c[j]);
+    v=c[j].length;
     count.push(v);
-}
-console.log(count);
+    console.log(count);
+    
+}  
+var s=count.sort();
+console.log(s[s.length-1]);
 });
