@@ -16,28 +16,22 @@ imp.on("close",()=>{
   {
     for(var j=i+1;j<a;j++)
     {
+        //console.log(b[i],b[j]);
       if(b[i]==b[j])
       {
-         
+      
         c.push(b[i],b[j])
         break;
       }
     }
   }
-  
- for(var k=0;k<a;k++)
-  {
-    for(var q=i+1;q<a;q++)
-    {
-      if(b[k]!=c[q])
-      {
-         
-        d.push(b[k])
-        break;
-      }
-    }
-  }
- 
- console.log(d.length);
+//console.log(c);
+ var s1=b.length;
+ //console.log(s1);
+ var s2=c.length;
+// console.log(s2);
+ var res=s1-s2;
+ console.log(res);
+
  
 });
