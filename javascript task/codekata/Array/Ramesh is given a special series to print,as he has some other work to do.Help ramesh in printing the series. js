@@ -1,0 +1,16 @@
+const readline=require('readline')
+const inp=readline.createInterface({
+    input:process.stdin
+});
+var user=[];
+inp.on("line",(data)=>{
+  user.push(data)
+  var s;
+  var a,b,c;
+   a=1;
+   b=1*parseInt(user);
+   c=b*20;
+console.log(a+" "+b+" "+c);
+  
+  
+});
