@@ -159,23 +159,18 @@ ul li {
           </tbody>
           </table>
       </div>
-          
-          
-          
-        
-      
-    
-    </body>
+              </body>
     <script>
-      var total;
+    var total;
 var product;
 var sum=0;
+var selectedRow=null;
 function add()
 {
-total=document.getElementById("mybudget").value;
+    total=document.getElementById("mybudget").value;
     console.log(total);
    document.getElementById("b").innerHTML="$"+total;
-
+   document.getElementById("mybudget").value="";
 }
 function d(td) {
     console.log("delete");
@@ -189,18 +184,34 @@ selectedRow=td.parentElement.parentElement;
 console.log(selectedRow);
 document.getElementById("t").value=selectedRow.cells[0].innerHTML;
 document.getElementById("price").value=selectedRow.cells[1].innerHTML;
+//selectedRow=10;
 }
-//function update()
-//{
-    
-    //selectr=this.td.parentElement.parentElement;
-  //  selectr.cells[0].innerHTML=document.getElementById("t").value;
-    //selectr.cells[1].innerHTML=document.getElementById("price").value;
-    //}
-
-
-function newElement()
+function update()
 {
+    
+    //selectedRow=this.td.parentElement.parentElement;
+    selectedRow.cells[0].innerHTML=document.getElementById("t").value;
+    selectedRow.cells[1].innerHTML=document.getElementById("price").value;
+    document.getElementById("t").value=" ";
+    document.getElementById("price").value=" ";
+}
+function newElement(){
+    console.log("checking");
+if (selectedRow==null)
+{
+    console.log("inside");
+    newEle()
+}
+else{
+    console.log("success");
+    update()
+    selectedRow=null;
+}
+
+}
+function newEle()
+{
+    console.log("check in new element if row==0");
 console.log("hi");
 var table=document.getElementById("employee").getElementsByTagName('tbody')[0];
 console.log("k");
@@ -223,11 +234,10 @@ var balance=total-sum;
 document.getElementById("bal").innerHTML="$"+balance;
 document.getElementById("t").value=" ";
 document.getElementById("price").value=" ";
+selectedRow=null;
 }
 
-    </script>
+
+   </script>
     </html>
-    
-      
-    
-</html>
+
