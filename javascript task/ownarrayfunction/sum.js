@@ -1,0 +1,29 @@
+const readline=require('readline');
+const inp=readline.createInterface({
+    input:process.stdin
+});
+const n=[];
+inp.on('line',(data)=>{
+    n.push(data);
+ });
+var l;
+var k=[];
+var sum=0;
+inp.on('close',()=>{
+    l=n[0];
+    k=n[1].split(" ");
+function sum1()
+{
+ for(var i=0;i<k.length;i++)
+ {
+     sum=sum+parseInt(k[i]);
+ }
+ return sum;
+}
+var res;
+res=sum1();
+console.log(res);
+});
+/output 
+1 2 3 4 5 
+15
