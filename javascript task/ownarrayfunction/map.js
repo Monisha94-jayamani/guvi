@@ -1,21 +1,12 @@
-const myevery=(array,callback)=>{
-    let c=0;
+const mypowfunc=(array,callback)=>{
+    var res=[];
     for(let i=0;i<array.length;i++)
     {
-        if(callback(array[i])){
-            c+=1;
-        }
+       res.push(callback(parseInt(array[i])))
     }
-    if(c===array.length)
-    
-        return true
-    
-    else
-    
-        return false
-    
+return res;
     
 }
-const predict=(x)=> x.length>3
-const data=["apple","bathh","catjk"]
-console.log(myevery(data,predict));
+const mypow=(x)=> Math.pow(x,2)
+const inp=[5,10,15]
+console.log(mypowfunc(inp,mypow));
