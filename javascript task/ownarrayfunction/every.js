@@ -1,43 +1,21 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-  input:process.stdin
-});
-const n=[];
-var count=0;
-inp.on('line',(data)=>{
-  n.push(data);
-});
-inp.on('close',()=>{
-    var k=[];
+const myevery=(array,callback)=>{
     var count=0;
-    var l;
-    k=n[0].split(" ");
-    l=parseInt(n[1]);
-    function every1()
+    for(let i=0;i<array.length;i++)
     {
-        for(var i=0;i<k.length;i++)
-        {
-            if(parseInt(k[i])%2==0)
-            {
-                count++;
-            }
-        }
-        return count;
+       if(callback(array[i]))
+       {
+           count+=1
+       }
     }
-    var d;
-    d=every1();
-    if(count==k.length)
-    {
-        console.log("True");
-    }
-    else
-    {
-        console.log("False");
-    }
-});
-    //output
-    2 4 6 
-    all even so
-    output ==is True
-    
-    
+if(count==array.length)
+{
+    return true;
+}
+else
+{
+    return false;
+}
+}    
+const multipleoffive=(x)=> x%5==0
+const inp=[5,10,15]
+console.log(myevery(inp,multipleoffive));
