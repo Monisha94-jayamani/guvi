@@ -1,33 +1,15 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-  input:process.stdin
-});
-const n=[];
-inp.on('line',(data)=>{
-  n.push(data);
-});
-inp.on('close',()=>{
-    var a=[];
-    var l=[];
-    a=n[0].split(" ");
-    var b=parseInt(n[1]);
-    function findindex1(){
-    for(var i=0;i<a.length;i++)
+const myindex=(array,callback)=>{
+
+    for(let i=0;i<array.length;i++)
     {
-        if(parseInt(a[i])==b)
-        {
-           return i;
-        }
-        
+       if(array[i]==m)
+       {
+           count==i;
+       }
     }
-    }
-    var res=findindex1();
-    console.log(res);
-    
-});
-    //output
-    inp:2 4 1
-2
-output:0
-    
-    
+return -1;
+}    
+
+const inp=[1,2,3];
+const m=4;
+console.log(myindex(inp,m));
