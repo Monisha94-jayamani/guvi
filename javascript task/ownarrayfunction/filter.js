@@ -1,33 +1,14 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-  input:process.stdin
-});
-const n=[];
-inp.on('line',(data)=>{
-  n.push(data);
-});
-inp.on('close',()=>{
-   var s1=n[0].split(" ");
-  var s=[];
-    function concat1(){
-      for(var i=0;i<s1.length;i++)
-      {
-         if(s1[i]>5)
-         {
-             s.push(s1[i]);
-         }
-      }
-      return s.join(" ");
+const myfilter=(array,callback)=>{
+   var new1=[];
+    for(let i=0;i<array.length;i++)
+    {
+       if(callback(array[i]))
+       {
+           new1.push(array[i]);
+       }
     }
-    var res=concat1();
-    console.log(res);
-   
-     
-});
-//output
-1 2 60 50 40
-60 50 40 
-
-    
-    
-    
+return new1
+}    
+const checkingcondition=(x)=> x<3
+const inp=[1,2,3]
+console.log(myfilter(inp,checkingcondition));
