@@ -1,53 +1,58 @@
- const readline=require('readline');
-const imp=readline.createInterface({
+
+deebika kishore
+7:37 PM (2 hours ago)
+to me
+
+const readline=require('readline');
+const inp=readline.createInterface({
     input:process.stdin
+})
+const user=[];
+inp.on('line',(data)=>{
+    user.push(data);
 });
-var userInput=[];
-imp.on("line",(data)=>{
-    userInput.push(data);
-});
-
-imp.on("close",()=>{
-    var a=parseInt(userInput[0]);
-    var array=userInput[1].split(" ");
-  function sortByFrequency(array) {
-    var frequency = {};
-    var sortAble = [];
-    var newArr = [];
-
-    array.forEach(function(value) { 
-        if ( value in frequency )
-            frequency[value] = frequency[value] + 1;
-        else
-            frequency[value] = 1;
-    });
-    
-
-    for(var key in frequency){
-        sortAble.push([key, frequency[key]])
-    }
-
-    sortAble.sort(function(a, b){
-        return a[1] - b[1]
-    })
-
-    
-    sortAble.forEach(function(obj){
-        for(var i=0; i < obj[1]; i++){
-            newArr.push(obj[0]);
+var n;
+var l=[];
+var da=[];
+var r=[];
+inp.on('close',()=>{
+    n=parseInt(user[0]);
+    l=user[1].split(" ");
+    for(var i=0;i<l.length;i++)
+    {  var c=0;
+        var m=l[i];
+        for(var j=0;j<l.length;j++)
+        {
+            if(parseInt(m)==parseInt(l[j]))
+            {
+                c++;
+            }
         }
-    })
-    return newArr;
-    
-}
-var b=sortByFrequency(array);
-console.log(b.join(" "));
-
-
+        r.push(c);
+        da.push(m);
+        m='';
+    }
+    console.log(r);
+    console.log(da);
+    var res=[];
+    res=r.sort();
+    console.log(res);
+    var h=0;
+    var k=[];
+    for(var i=(r.length)-1;i>=0;i--)
+    {  
+        for(var j=0;j<res.length;j++)
+         {
+            if(parseInt(r[i])==parseInt(res[j]))
+            {
+                k.push(da[i]);
+                //console.log(da[i]);
+                break;
+        }
+         }
+    }
+   
+    console.log(k.join(" "));
+   
+   
 });
-i/p and o/p
-Sample Input :
-5
-8 8 1 1 3
-Sample Output :
-3 1 1 8 8
