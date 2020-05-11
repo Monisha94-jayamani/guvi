@@ -19,7 +19,7 @@ inp.on("close",()=>{
     if (string.indexOf(char) != i) 
       continue;
 
-    var remainingString = string.slice(0, i) + string.slice(i + 1, string.length); //Note: you can concat Strings via '+' in JS
+    var remainingString = string.slice(0, i) + string.slice(i + 1, string.length);
 
     for (var subPermutation of permut(remainingString))
       permutations.push(char + subPermutation)
