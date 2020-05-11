@@ -1,36 +1,49 @@
+
 const readline=require('readline');
 const inp=readline.createInterface({
-  input:process.stdin
+    input:process.stdin
 });
-var user=[];
-inp.on("line",(data)=>{
-  user.push(data)
+const user=[];
+inp.on('line',(data)=>{
+    user.push(data);
 });
-inp.on("close",()=>{
-    var a=user[0];
-    function permut(string) {
-  if (string.length < 2) 
-    return string; 
-
-  var permutations = []; 
-  for (var i = 0; i < string.length; i++) {
-    var char = string[i];
- 
-    if (string.indexOf(char) != i) 
-      continue;
-
-    var remainingString = string.slice(0, i) + string.slice(i + 1, string.length);
-
-    for (var subPermutation of permut(remainingString))
-      permutations.push(char + subPermutation)
+inp.on('close',()=>{
+  var a=user[0].split("");
+  var res=[];
+  for(var i=0;i<a.length;i++)
+  {
+    var b=a[i];
+    var s=a.slice(0,i)+a.slice(i+1,a.length);
+    var c=s.split(",").join("");
+   var f=b+c;
+   //console.log(f);
+   res.push(f);
+     for(var j=0;j<c.length-1;j++)
+     {
+       var l=c.split("");
+       //console.log("l",l);
+       var p=l.pop();
+       //console.log("pop",p);
+       //console.log(l);
+        l.unshift(p)
+       //console.log("latest",l);
+       v=b+l.join("");
+       //console.log(v);
+       res.push(v);
+     }
   }
-  return permutations;
-}
-var b=[];
-b=permut(a);
-//console.log(b);
-for(var i=0;i<b.length;i++)
-{
-    console.log(b[i])
-}
+  //console.log(res);
+  for(var k=0;k<res.length;k++)
+  {
+      console.log(res[k]);
+  }
 });
+
+
+
+
+
+
+
+
+
