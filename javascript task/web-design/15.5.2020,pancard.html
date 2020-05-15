@@ -6,7 +6,7 @@
   float: left;
   width: 30%;
   padding: 10px;
-  height: 300px;
+  
 }
 .column1 {
   float: left;
@@ -69,10 +69,24 @@ table, th, td {
     <tr>
   
     <td style="width:5%"></td>
-    <td> SurName/FirstName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Lastname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SurName <br>
-    <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+    <td> 
+    <div class="row">
+  <div class="column">
+   LastName/SurName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+    FirstName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+   MiddleName
+   <br>
+   <input type="text">
+   </div>
+   </div>
     </td>
   </tr>
   <tr>
@@ -102,10 +116,24 @@ table, th, td {
 </tr>
  <tr>
   <td style="width:5%"></td>
-  <td> SurName/LastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Firstname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MiddleName <br>
-    <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+  <td>
+  <div class="row">
+  <div class="column">
+   LastName/SurName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+    FirstName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+   MiddleName
+   <br>
+   <input type="text">
+   </div>
+   </div>
     </td>
   </tr>
    <tr>
@@ -115,20 +143,42 @@ table, th, td {
   </tr>
   <tr>
   <td style="width:5%"></td>
-   <td> SurName/LastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Firstname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MiddleName <br>
-    <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+   <td>
+   <div class="row">
+  <div class="column">
+   LastName/SurName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+    FirstName
+   <br>
+   <input type="text">
+   </div>
+    <div class="column">
+   MiddleName
+   <br>
+   <input type="text">
+   </div>
+   </div>
     </td>
   </tr>
   <tr>
   <td style="width:5%"></td>
-  <td><span style="color:red">*</span>4.Select the parent name should be printed in the card  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" >
+  <td>
+  <div class="row">
+  <div class="column1">
+
+  <span style="color:red">*</span>4.Select the parent name should be printed in the card 
+  (in case no option is provided the PAN card will be issued in Father's Name);
+  </div>
+  <div class="column2">
+    <input type="radio" >
   <label for="k"> Yes</label>
   <input type="radio" >
   <label for="f">No</label><br>
-  (in case no option is provided the PAN card will be issued in Father's Name);
+  </div>
+  </div>
    </td>
   </tr>
    <tr>
