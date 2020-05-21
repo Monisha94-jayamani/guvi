@@ -11,52 +11,24 @@
 
     function randomtask()
     {
-              var a=[];
-          var c=1;
+         var a=[];
    
-      for(var i=1;i<=5;i++)
-      {
-      var b= Math.floor(Math.random() * 10); 
-       //console.log("b",b);
-       //console.log("a",a)
-      var n=a.includes(b);
-          if (n.toString()==="false")
+            for(var i=a.length;i<=5;i++)
             {
-             a.push(b);
-             //console.log(a);
+                var r=Math.floor(Math.random()*10);
+                var n=a.includes(r);
+               // console.log(n,r);
+                if(n.toString()=="false")
+                {
+                    
+                    a.push(r);
+                    //console.log(a);
+                    i=a.length;
+                }
+                i=a.length;
             }
-}
-    var l=5-a.length;
-   // console.log("l",l);
-    function rad()
-    {
-       
-         for(var p=0;p<l;p++)
-         {
-        var z=Math.floor(Math.random()*10);
-        //console.log("kh");
-        //console.log(z);
-        var n2=a.includes(z);
-        if(n2.toString()==="false")
-        {
-            a.push(z);
            
-            
-        }
-     
-     
-        }
-        
-    }
-rad()
-l=5-a.length;
-//console.log("end",l);
-if(a.length!=5)
-{
-    rad()
-    
-}
-   // console.log(a.join(""));
+console.log(a.join(""));
     return a.join("");
     }          
     
