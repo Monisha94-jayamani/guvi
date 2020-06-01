@@ -1,4 +1,5 @@
 function a(){
+//To create technical specifications objects
 var TechnicalSpecifications={
    "Dimensions": {
      "overall length":3500,
