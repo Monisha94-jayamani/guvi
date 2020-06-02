@@ -127,6 +127,7 @@
 var obj = {"name" : "RajiniKanth", "age" : 33, hasPets : false};
 function printAllValues(obj) {
     var array=[]
+    //iterate all in which returns all object keys
  for(var i in obj)
  {
      var key=i;
@@ -149,6 +150,7 @@ printAllValues(obj);
 var obj = {"name" : "RajiniKanth", "age" : 33, hasPets : false};
 function printAllKeys(obj) {
     var array=[]
+    //iterate the loop in which it returns all objects key
  for(var i in obj)
  {
      var key=i;
@@ -191,8 +193,10 @@ var arr = ["GUVI", "I", "am", "a geek"];
 //function to  create a object with first and last value in array
 function transformFirstAndLast(arr) {
     var newObject={};
+    //getting key as GUVI
     var key=arr[0];
     //console.log(key)
+    //getting value as "a geek"
     var value=arr[arr.length-1];
     //console.log(value);
     
@@ -204,11 +208,14 @@ console.log(transformFirstAndLast(arr))
 //output
 //var object = { GUVI : “Geek” }
 
+
+
 //Problem 5 ( 7 -9 mins):
 //Parsing a list of lists and convert into a JSON object:
 var arr = [["make", "Ford"], ["model", "Mustang"], ["year", 1964]];
 function fromListToObject(arr) {
  var newObject = {};
+ //iterate and convert the list to json
  for(var i=0;i<arr.length;i++)
  {
      var value=arr[i];
@@ -232,6 +239,7 @@ var arr= [[["firstName", "Vasanth"], ["lastName", "Raja"], ["age", 24], ["role",
 function transformEmployeeData(arr) {
  var tranformEmployeeList = [];
  var newObject={}
+ //loop to iterate and tranform the array of object
   for(var i=0;i<arr.length;i++)
   {
       var first=arr[i]
@@ -239,8 +247,7 @@ function transformEmployeeData(arr) {
       {
           var l=0;
           var inside=first[j];
-          
-          
+                  
           newObject[inside[l]]=inside[l+1];
       }
 
@@ -286,15 +293,50 @@ console.log(transformEmployeeData(arr));
 
      //Problem 8(10 mins):
      //Parsing JSON objects and Compare:
-     
+     var securityQuestions = [
+        {
+        question: "What was your first pet’s name?",
+        expectedAnswer: "FlufferNutter"
+        },
+        {
+        question: "What was the model year of your first car?",
+        expectedAnswer: "1985"
+        },
+        {
+        question: "What city were you born in?",
+        expectedAnswer: "NYC"
+        }
+       ]
+       function chksecurityQuestions(securityQuestions,ques,ans) {
+           var question=ques;
+           var answer=ans;
+           var newobj={}
+           //creation of objects
+           newobj["question"]=question;
+           newobj["expectedAnswer"]=answer;
+           //checking valid or not valid
+           //iterate the objects each in securityQuestions
+           for(var i=0;i<securityQuestions.length;i++)
+           {
+               //before checking convert to string
+               if(JSON.stringify(securityQuestions[i])==JSON.stringify(newobj))
+               {
+                   return true;
+               }
+               else
+               {
+                   return false;
+               }
+           }
+       }
+       var status=chksecurityQuestions(securityQuestions,"What was your first pet’s name?","FlufferNutter");
+       console.log(status);
+       //output
+       // true
 
 
 
-
-
-
-
-    //Problem 9(20 mins):
+   //Problem 9(20 mins):
     //Parsing JSON objects and Compare:
     //Write a function to return the list of characters below 20 age
     var students = [
@@ -306,11 +348,13 @@ console.log(transformEmployeeData(arr));
     {name: "Chulbul Pandey",age: 19},{name: "Anthony",age: 28},
     {name: "Devdas",age: 56} 
     ];
+    //functions to return minor
     function returnMinors(arr)
      {
        var arraylist=[];
        for(var i=0;i<students.length;i++)
        {
+           //checking the each person name below 20
            if(students[i]["age"]>20)
            {
                arraylist.push(students[i]["name"])
