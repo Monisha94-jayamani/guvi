@@ -363,4 +363,5 @@ console.log(transformEmployeeData(arr));
        return arraylist;
    }
    console.log(returnMinors(students));
-   
+   //output
+   //[ 'Siddharth Abhimanyu','Malar','AAK chandran','Gabbar Singh','Mogambo','Munnabhai','Anthony','Devdas' ]
