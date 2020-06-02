@@ -257,8 +257,36 @@ console.log(transformEmployeeData(arr));
   //[{firstName: “Vasanth”, lastName: “Raja”, age: 24, role: “JSWizard”},{firstName: “Sri”, lastName: “Devi”, age: 28, role: “Coder”} ]
 
 
+   
    //Problem 7 (10 — 20 mins):
    //Parsing two JSON objects and Compare:
+   var expected = {foo: 5, bar: 6};
+   var actual = {foo: 6, bar: 5}
+   function assertObjectsEqual(actual, expected, testName){
+   // your code here
+   //actual parsing string
+  var act=JSON.stringify(actual);
+  //expected parsing string
+  var expect=JSON.stringify(expected);
+  var testCase=testName;
+  //Compare the two string
+  if(act===expect)
+   {
+     console.log("Passed");
+   }
+    else
+    {
+     console.log("FAILED [my test] Expected"+expect+"but got"+act)
+    }
+    }
+     assertObjectsEqual(actual,expected,"case1")
+     //output
+     //Output:FAILED [my test] Expected{"foo":5,"bar":6}but got{"foo":6,"bar":5}
+
+
+     //Problem 8(10 mins):
+     //Parsing JSON objects and Compare:
+     
 
 
 
