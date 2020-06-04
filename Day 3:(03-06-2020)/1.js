@@ -508,15 +508,14 @@ var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
 var max = findMax(ar);
 
 
-//Print the first 100 prime numbers
-console.log(printPrimes(100));
+//Print the first range prime numbers
 var primes = [2];
 //function to print prime numbers
-function printPrimes(n)
+function printPrimes(a,n)
 {
-for (var i=3;i<n;i+=2){
+for (var i=a;i<n;i++){
     var isPrime = true;
-    for (var j = 0;j<primes.length;j++){
+    for (var j=0;j<primes.length;j++){
         if (i%primes[j]===0){
             isPrime=false;
             break;
@@ -529,8 +528,31 @@ for (var i=3;i<n;i+=2){
     return primes
 
 }
+console.log(printPrimes(10,100));
 
 
+//Print the first 100 prime numbers
+
+var primes = [2];
+//function to print prime numbers
+function printPrimes(n)
+{
+for (var i=3;i<n;i++){
+    var isPrime = true;
+    for (var j=0;j<primes.length;j++){
+        if (i%primes[j]===0){
+            isPrime=false;
+            break;
+        }
+    }
+    if(isPrime){primes.push(i)
+        
+    }
+}
+    return primes
+
+}
+console.log(printPrimes(100));
 
 
 ////Problem:
