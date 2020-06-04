@@ -2,13 +2,8 @@
 //4.1 odd numbers in a array
 var number=[1,2,3,4,5,6,7,8,9,10]
 var oddFunction
-oddFunction =()=> {
-  var odd=number.filter(function(a){
-      return a%2!==0
-  })
-console.log(odd)
-};
-oddFunction()
+oddFunction  =number.filter(a=>( a%2)!==0)
+console.log(oddFunction)
 
 ////4 Arrow function 
 //4.2 convert all the strings to title caps in a string array
