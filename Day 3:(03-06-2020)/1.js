@@ -508,6 +508,29 @@ var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
 var max = findMax(ar);
 
 
+//Print the first 100 prime numbers
+console.log(printPrimes(100));
+var primes = [2];
+//function to print prime numbers
+function printPrimes(n)
+{
+for (var i=3;i<n;i+=2){
+    var isPrime = true;
+    for (var j = 0;j<primes.length;j++){
+        if (i%primes[j]===0){
+            isPrime=false;
+            break;
+        }
+    }
+    if(isPrime){primes.push(i)
+        
+    }
+}
+    return primes
+
+}
+
+
 
 
 ////Problem:
