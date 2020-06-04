@@ -9,28 +9,17 @@ console.log(oddFunction)
 //4.2 convert all the strings to title caps in a string array
 var string=["ishwarya","guvi","geek"]
 var capitalizeFunction
-capitalizeFunction =  ()=> {
-  var newarray=string.map(function(a){
-      var first=a[0].toUpperCase()+a.slice(1);
-      return first
-  })
-console.log(newarray)
-};
-capitalizeFunction()
+capitalizeFunction =string.map(a=>a[0].toUpperCase()+a.slice(1));
+console.log(capitalizeFunction)
 
 
-////4.1 Arrow function 
+///4.1 Arrow function 
 //4.3. Sum of all numbers in an array 
 var numbers=[1,2,3,5]
 var sumFunction
-sumFunction =  ()=>{
-  var total=numbers.reduce(function(t,a){
-      
-      return t+a
-  })
-console.log(total)
-};
-sumFunction()
+sumFunction = numbers.reduce((t,a)=>t+a);
+  
+console.log(sumFunction)
 
 //////4 Arrow function 
 //4.4. Return all the prime numbers in an array 
@@ -79,21 +68,11 @@ prime()
 
 
 
+
 ////4 Arrow function 
 //4.5 Return all the palindromes in an array 
 var string1=["malayalam","guvi","mam"]
-var palindromeFunction
-palindromeFunction =  ()=> {
-  var palindromes=string1.filter(function(a){
-      var b=a.split('').reverse().join('') 
+var palindromeFunction=string1.filter(a=>(a.split('').reverse().join('')) ==a);
 
-      if(a==b)
-      {
-          return a;
-      }
-  }) 
-      
  
-console.log(palindromes)
-};
-palindromeFunction()
+console.log(palindromeFunction)
