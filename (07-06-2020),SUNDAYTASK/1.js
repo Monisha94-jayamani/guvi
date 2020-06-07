@@ -130,6 +130,20 @@ function flatten(arr1) {
 }
 
 console.log(flatten(arr1));
+//alternative
+var arr1 = [1,[2,[3,[4]],5]];
+function flatten(arr1) {
+    var res=[]
+    var s=arr1.map(function(a){
+        var y=a.toString().split(",")
+        y.map(function(b){
+            res.push(parseInt(b))
+        })
+        
+    });
+    return res;
+}
+console.log(flatten(arr1))
 
 
 //9.flattenDeep 
