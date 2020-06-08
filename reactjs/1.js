@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div id="root" style="margin-right:30px;margin-left:30px"></div>
+    <div id="root" style="margin-right:30px;margin-left:190px"></div>
 
     <script>
       const rootElement = document.getElementById("root");
@@ -38,7 +38,7 @@
 
        const DivElement1 = React.createElement(
          "div",
-         { className: "gridcontainer",style:{ display:"grid",gridTemplateColumns:"auto auto auto auto",gridColumnGap:"10px",gridRowGap:"10px",padding:"10px"}},
+         { className: "gridcontainer",style:{ display:"grid",gridTemplateColumns:"auto auto auto auto",gridColumnGap:"10px",gridRowGap:"10px",width:"30px",padding:"10px"}},
          element,
          element,
          element,
