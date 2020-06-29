@@ -19,7 +19,8 @@ app.get("/", (req, res) => {
 });
 //API to display all files in the folder
 app.get("/list", (req, res) => {
-  fs.readdir(path.join(__dirname, "firstask"), (err, files) => {
+  //fs.readdir(path.join(__dirname, "firstask"), (err, files) => {
+   fs.readdir("/Users/ELCOT/Desktop/Node/firstask", (err, files) => {
     if (err) throw err;
     res.send(files);
   });
